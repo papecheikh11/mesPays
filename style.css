@@ -45,11 +45,16 @@ a {
 
 .mes-input{
     display: flex;
+
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin: auto;
 }
 .rechercher {
     margin-left: 16px;
     background-color: #fff;
+    margin: 16px;
+
     width: 255px;
     height: 30px;
     padding: auto;
@@ -61,6 +66,8 @@ a {
 }
 
 .continent{
+    margin: 16px;
+
     margin-left: 16px;
     background-color: #fff;
     width: 255px;
@@ -130,6 +137,7 @@ input, select{
 .fa-moon{
     cursor: pointer;
 }
+
 
 @media(max-width: 768px){
     .countries-container{
