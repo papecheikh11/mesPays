@@ -3,18 +3,25 @@
 }
 
 body{
+    --background-color:white;
+    --text-color:black;
+    --elements-color:white;
     margin: 0;
     font-family: Nunito, sans-serif;
-    background-color: #bdeae8;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-.maMode{
-    background-color: rgba(51, 49, 49, 0.884);
-    color: #fff;
+body.dark {
+    --background-color:hsl(207, 26%, 17%);
+    --text-color:white;
+    --elements-color:hsl(207, 26%, 22%);  
 }
 
-i{
-    color: black;
+
+
+.theme-changer{
+    cursor: pointer;
 }
 
 main{
@@ -29,6 +36,7 @@ a {
 .header-container{
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
     padding-inline: 24px;
+    background-color: var(--elements-color);
 }
 
 .header-content{
@@ -43,62 +51,14 @@ a {
     font-weight: 800;
 }
 
-.mes-input{
-    display: flex;
-
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: auto;
-}
-.rechercher {
-    margin-left: 16px;
-    background-color: #fff;
-    margin: 16px;
-
-    width: 255px;
-    height: 30px;
-    padding: auto;
-    border-radius: 10px;
-    align-content: center;
-    align-items: center;
-    padding: 5px 10px;
-    margin-left: 50px;
-}
-
-.continent{
-    margin: 16px;
-
-    margin-left: 16px;
-    background-color: #fff;
-    width: 255px;
-    height: 30px;
-    padding: auto;
-    border-radius: 10px;
-    align-content: center;
-    align-items: center;
-    padding: 5px 10px;
-    margin-left: 50px;
-}
-
-.rechercher i{
-    cursor: pointer;
-}
-
-input, select{
-    margin: auto;
-    outline: none;
-    border: none;
-}
-
-
-
-.countries-container{
+.countries-container {
     max-width: 1200px;
     margin-inline: auto;
     margin-top: 16px;
     display: flex;
     gap: 64px;
     flex-wrap: wrap;
+    margin-inline: auto;
     justify-content: space-between;
 }
 
@@ -110,6 +70,7 @@ input, select{
     padding-bottom: 18px;
     box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease-in-out;
+    background-color: var(--elements-color);
 }
 
 .country-card:hover {
@@ -138,6 +99,55 @@ input, select{
     cursor: pointer;
 }
 
+.search-filter-container{
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 16px;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.search-container{
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+    max-width: 350px;
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 24px;
+    color: #999;
+    overflow: hidden;
+}
+
+.search-container input{
+    border: none;
+    outline: none;
+    padding: 16px;
+   width: 90%;
+   background-color: inherit;
+   color: inherit;
+}
+
+.search-container input::placeholder{
+    color: #999;
+}
+
+.filter-by-region{
+    width: 250px;
+    padding: 16px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+}
+
+.none{
+    display: none;
+}
+
+
 
 @media(max-width: 768px){
     .countries-container{
@@ -150,5 +160,9 @@ input, select{
 
     .header-content p{
         font-size: 12px;
+    }
+
+    .search-filter-container {
+        flex-direction: column;
     }
 }

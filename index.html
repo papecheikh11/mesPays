@@ -12,30 +12,28 @@
 <body>
     <header class="header-container">
         <div class="header-content">
-            <h2 class="title">Where in the world</h2>
-            <p class="txtDark"><i class="fa-regular fa-moon"></i>&nbsp; &nbsp; Dark Mode</p>
+            <h2 class="title"><a href="/">Where in the world</a></h2>
+            <p class="theme-changer"><i class="fa-regular fa-moon"></i>&nbsp; &nbsp; Dark Mode</p>
         </div>
     </header>
     <main>
-        <div class="mes-input">
-            <div class="rechercher">
+        <div class="search-filter-container">
+            <div class="search-container">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search a country" class="searchCountrie mesElements">
+                <input type="text" placeholder="Search for a country...">
             </div>
-            <div class="continent">
-                <select type="select" placeholder="Region" id="filter" class="mesElements2">
-                    <option value="">Choisir un continent</option>
-                    <option value="Africa">Afrique</option>
-                    <option value="Europe">Europe</option>
-                    <option value="Americas">Ameriques</option>
-                    <option value="Asia">Asie</option>
-                    <option value="Oceania">Oceanie</option>
-                </select>
-            </div>
+            <select class="filter-by-region">
+                <option hidden>Filter by Region</option>
+                <option value="Africa">Afrique</option>
+                <option value="Americas">Ameriques</option>
+                <option value="Asia">Asie</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceanie</option>
+            </select>
+        
         </div>
         
-        <div class="countries-container">  
-        </div>
+        <div class="countries-container"></div>
     </main>
 </body>
 </html>
